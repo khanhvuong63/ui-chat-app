@@ -1,7 +1,7 @@
 
 import { Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
-import { Home } from './pages/home/Home'
+import { Home } from './pages/Home/Home'
 import { Signup } from './pages/Signup/Signup'
 import { Login } from './pages/Login/Login'
 import { ToastContainer } from 'react-toastify'
