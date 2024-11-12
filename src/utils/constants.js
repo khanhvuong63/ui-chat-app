@@ -1,4 +1,5 @@
 let apiRoot = '';
+console.log('import meta env' ,import.meta.env);
 
 if (import.meta.env.VITE_BUILD_MODE === 'development') {
   apiRoot = 'http://localhost:5000';
