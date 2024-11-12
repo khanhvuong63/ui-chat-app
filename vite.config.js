@@ -28,6 +28,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
+  define: {
+    'import.meta.env.VITE_BUILD_MODE': JSON.stringify(import.meta.env.VITE_BUILD_MODE || 'http://localhost:5000'), // mặc định cho dev
+  },
   server: {
     proxy: mode === 'development' ? {
       '/api': {
