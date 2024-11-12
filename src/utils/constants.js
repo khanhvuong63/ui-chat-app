@@ -1,9 +1,10 @@
 let apiRoot = '';
 console.log('import meta env' ,import.meta.env);
+console.log('process env' ,process.env);
 
-if (import.meta.env.VITE_BUILD_MODE === 'development') {
+if (process.env.BUILD_MODE === 'dev') {
   apiRoot = 'http://localhost:5000';
-} else if (import.meta.env.VITE_BUILD_MODE === 'production') {
+} if (process.env.BUILD_MODE === 'production') {
   apiRoot = 'https://api-chat-app-209j.onrender.com';
 }
 
