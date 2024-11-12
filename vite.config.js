@@ -21,23 +21,20 @@
 //   }
 // })
 
+
+// Cấu hình Vite tùy theo môi trường
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-
-// Cấu hình Vite tùy theo môi trường
-export default defineConfig(({ mode }) => {
-  return {
-    plugins: [react()],
-    base: mode === 'production' ? './' : '/', // Đặt base path cho production
-    server: {
-      proxy: {
-        '/api': {
-          target: mode === 'production' ? 'https://api-chat-app-209j.onrender.com/api' : 'http://localhost:5000',
-          changeOrigin: true,
-          secure: true,
-        },
+export default defineConfig(({ mode }) => ({
+  plugins: [react()],
+  server: {
+    proxy: mode === 'development' ? {
+      '/api': {
+        target: 'http://localhost:5000', // Local backend trong development
+        changeOrigin: true,
+        secure: false,
       },
-    },
-  };
-});
+    } : undefined,
+  },
+}));

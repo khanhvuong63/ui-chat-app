@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { toast } from "react-toastify"
 import { useAuthContext } from "../context/authContext"
+import { API_ROOT } from "../utils/constants"
 
 
 export const useLogin = () => {
@@ -11,7 +12,7 @@ export const useLogin = () => {
     if(!success) return
     setLoading(true)
     try {
-        const res = await fetch(`/api/auth/login`, {
+        const res = await fetch(`/${API_ROOT}/auth/login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body:JSON.stringify({ username, password })
