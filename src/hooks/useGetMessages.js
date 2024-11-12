@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { toast } from "react-toastify";
 import { useConversation } from "../zustand/useConversation";
+import { API_ROOT } from "../utils/constants";
 
 
 export const useGetMessages = () => {
@@ -12,7 +13,7 @@ export const useGetMessages = () => {
 		const getMessages = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`/api/messages/${selectedConversation._id}`);
+				const res = await fetch(`${API_ROOT}/api/messages/${selectedConversation._id}`);
 				const data = await res.json();
 				if (data.error) throw new Error(data.error);
 				setMessages(data);
