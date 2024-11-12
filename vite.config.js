@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: mode === 'production' ? 'https://api-chat-app-209j.onrender.com' : 'http://localhost:5000',
+          target: mode === 'production' ? 'https://api-chat-app-209j.onrender.com/api' : 'http://localhost:5000',
           changeOrigin: true,
           secure: true,
         },
