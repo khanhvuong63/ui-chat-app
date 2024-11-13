@@ -11,5 +11,5 @@ console.log('process env' ,process.env);
 // export const API_ROOT = apiRoot;
 
 export const API_ROOT  = process.env.BUILD_MODE === 'production' 
-    ? 'https://api-chat-app-209j.onrender.com' 
-    : 'http://localhost:5000';
+    ? 'https://ui-chat-app.vercel.app' 
+    : 'http://localhost:3000';
