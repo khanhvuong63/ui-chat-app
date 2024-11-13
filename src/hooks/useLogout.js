@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useAuthContext } from "../context/authContext"
 import { toast } from "react-toastify"
-import { API_ROOT } from "../utils/constants"
+
 
 
 export const useLogout = () => {
@@ -11,7 +11,7 @@ export const useLogout = () => {
   const logout = async () => {
     setLoading(true)
     try {
-         const res = await fetch(`/${API_ROOT}/auth/logout`, {
+         const res = await fetch(`/auth/logout`, {
          method: "POST",
          headers: {"Content-Type": "application/json"},
         })

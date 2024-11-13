@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useConversation } from "../zustand/useConversation";
 import { toast } from "react-toastify";
-import { API_ROOT } from "../utils/constants";
 
 
 
@@ -12,7 +11,7 @@ export const useSendMessage = () => {
 	const sendMessage = async (message) => {
 		setLoading(true);
 		try {
-			const res = await fetch(`/${API_ROOT}/messages/send/${selectedConversation._id}`, {
+			const res = await fetch(`/messages/send/${selectedConversation._id}`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
