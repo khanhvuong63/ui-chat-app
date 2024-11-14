@@ -12,7 +12,7 @@
 //  export const API_ROOT = apiRoot;
 
 export const API_ROOT  = process.env.BUILD_MODE === 'production' 
-    ? '/api'
+    ? ''
     : '/api';
 
 console.log('apiroot:', API_ROOT);
