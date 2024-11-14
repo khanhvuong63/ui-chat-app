@@ -2,12 +2,14 @@
 
 Ứng dụng chat online này cung cấp một nền tảng giao tiếp trực tuyến thân thiện và dễ sử dụng, cho phép người dùng gửi và nhận tin nhắn theo thời gian thực
 
+
 - Giao Diện UI
   Trang Đăng Nhập / Đăng Ký:
   Giao diện đăng nhập và đăng ký cho phép người dùng tạo tài khoản hoặc đăng nhập để truy cập hệ thống. Dữ liệu người dùng được bảo mật thông qua mã hóa và xác thực bằng token.
   Trang Chủ:
   Sidebar: Hiển thị danh sách tên của các người dùng có sẵn để trò chuyện ( Hiển thị trạng thái trực tuyến: Online / Offline ). Sidebar có thanh tìm kiếm ở phía trên, cho phép người dùng dễ dàng tìm kiếm và chọn người muốn trò chuyện. Dưới cùng có nút Logout giúp người dùng đăng xuất tài khoản.
   Message: Hiển thị cuộc trò chuyện giữa hai người dùng, hỗ trợ cuộn lại để xem lịch sử trò chuyện. Phía dưới có thanh nhập (input) để người dùng có thể gửi tin nhắn.
+
 
 - Tính Năng
   Gửi và nhận tin nhắn theo thời gian thực:
