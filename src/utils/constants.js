@@ -12,7 +12,7 @@
 //  export const API_ROOT = apiRoot;
 
 export const API_ROOT  = process.env.BUILD_MODE === 'production' 
-    ? 'https://api-chat-app-209j.onrender.com' 
+    ? 'https://api-chat-app-209j.onrender.com/api' 
     : '/api';
 
 console.log('apiroot:', API_ROOT);
