@@ -14,7 +14,10 @@ export const useLogout = () => {
     try {
          const res = await fetch(`${API_ROOT}/auth/logout`, {
          method: "POST",
-         headers: {"Content-Type": "application/json"},
+         headers: {
+          "Content-Type": "application/json",
+          'Origin': window.location.origin
+         },
         })
         const data = await res.json()
         if (data.error) {

@@ -15,7 +15,10 @@ export const useLogin = () => {
     try {
         const res = await fetch(`${API_ROOT}/auth/login`, {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: {
+              "Content-Type": "application/json",
+              'Origin': window.location.origin
+            },
             body:JSON.stringify({ username, password })
         })
         const data = await res.json()

@@ -17,7 +17,9 @@ function useSignup() {
     try {
         const res = await fetch(`${API_ROOT}/auth/signup`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json",
+            'Origin': window.location.origin
+          },
           body: JSON.stringify({ fullName, username, password, confirmPassword, gender }),
         })
 
